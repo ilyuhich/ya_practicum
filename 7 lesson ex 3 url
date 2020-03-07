@@ -1,0 +1,10 @@
+#запрос
+user_query = 'как стать бэкенд-разработчиком'
+#разделяем строку на список 
+query_list = user_query.split(' ')
+#собираем строку обратно с другим разделителем
+query_string = ('%20'.join(query_list))
+#собираем строку
+url = 'https://yandex.ru/search/?text=' + query_string  # ваш код здесь
+
+print(url)
