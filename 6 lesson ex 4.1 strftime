@@ -41,7 +41,7 @@ def what_time(friend):
         city = DATABASE[friend] #если есть, забираем город
         if city in UTC_OFFSET.keys(): #смотрим есть ли город в словаре
             time += dt.timedelta(hours = UTC_OFFSET[city])
-    return time
+    return (time.strftime('%H:%M'))
 
 
-print(what_time('Алина').strftime('%H:%M'))
+print(what_time('Алина'))
